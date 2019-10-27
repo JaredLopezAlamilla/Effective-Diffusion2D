@@ -22,13 +22,6 @@ Vkq=fftshift(fft2(V0)/(M^2));
 % ---- Solve for coefficients ---- 
 [Pkq, Jxkq, Jykq, ~, ~, ~,Norm]=null_solver(Akq,Jxk,Jyk,M,L,n);
 
-[P_pos,Xfine,Yfine]=kspace2position1(Pkq,n,MM,0,L); 
-[V2D,~,~]=kspace2position1(Vkq,n,MM,0,L);
-
-[P_pos,Xfine,Yfine,V2D]=deal(real(P_pos),real(Xfine),real(Yfine),real(V2D));
-
-V2D=V2D-max(V2D(:)); %fix reference level
-
 mid = round(length(Jxkq)/2);
 vx = real(Jxkq(mid,mid))*L;
 vy = real(Jykq(mid,mid))*L;
