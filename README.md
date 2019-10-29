@@ -1,4 +1,4 @@
-# Effective-Diffusion
+# Effective-Diffusion 2D
 The script Diffsuion2Entropy calculates effective diffusion tensor and entropy production
 for a overdamped Brownian system over a tilted periodic potential in 2D
 
